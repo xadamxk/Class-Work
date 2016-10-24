@@ -10,3 +10,9 @@ C:\Users\Adam\Documents\CS 311 - Algorithms\MyStackListConsoleApplication\MyStac
 C:\Users\Adam\Documents\CS 311 - Algorithms\MyStackListConsoleApplication\MyStackListConsoleApplication\bin\Debug\MyStackListConsoleApplication.exe
 C:\Users\Adam\Documents\CS 311 - Algorithms\MyStackListConsoleApplication\MyStackListConsoleApplication\bin\Debug\MyStackListConsoleApplication.pdb
 C:\Users\Adam\Documents\CS 311 - Algorithms\MyStackListConsoleApplication\MyStackListConsoleApplication\obj\Debug\MyStackListConsoleApplication.csprojResolveAssemblyReference.cache
+C:\Users\Adam\Documents\GitHub\Class-Work\MyStackListConsoleApplication\MyStackListConsoleApplication\bin\Debug\MyStackListConsoleApplication.exe.config
+C:\Users\Adam\Documents\GitHub\Class-Work\MyStackListConsoleApplication\MyStackListConsoleApplication\obj\Debug\MyStackListConsoleApplication.exe
+C:\Users\Adam\Documents\GitHub\Class-Work\MyStackListConsoleApplication\MyStackListConsoleApplication\obj\Debug\MyStackListConsoleApplication.pdb
+C:\Users\Adam\Documents\GitHub\Class-Work\MyStackListConsoleApplication\MyStackListConsoleApplication\bin\Debug\MyStackListConsoleApplication.exe
+C:\Users\Adam\Documents\GitHub\Class-Work\MyStackListConsoleApplication\MyStackListConsoleApplication\bin\Debug\MyStackListConsoleApplication.pdb
+C:\Users\Adam\Documents\GitHub\Class-Work\MyStackListConsoleApplication\MyStackListConsoleApplication\obj\Debug\MyStackListConsoleApplication.csprojResolveAssemblyReference.cache
