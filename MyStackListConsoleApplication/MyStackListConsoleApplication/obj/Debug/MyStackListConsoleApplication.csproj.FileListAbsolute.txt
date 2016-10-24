@@ -1,0 +1,12 @@
+c:\users\adam\documents\visual studio 2013\Projects\MyStackListConsoleApplication\MyStackListConsoleApplication\bin\Debug\MyStackListConsoleApplication.exe.config
+c:\users\adam\documents\visual studio 2013\Projects\MyStackListConsoleApplication\MyStackListConsoleApplication\obj\Debug\MyStackListConsoleApplication.csprojResolveAssemblyReference.cache
+c:\users\adam\documents\visual studio 2013\Projects\MyStackListConsoleApplication\MyStackListConsoleApplication\bin\Debug\MyStackListConsoleApplication.exe
+c:\users\adam\documents\visual studio 2013\Projects\MyStackListConsoleApplication\MyStackListConsoleApplication\bin\Debug\MyStackListConsoleApplication.pdb
+c:\users\adam\documents\visual studio 2013\Projects\MyStackListConsoleApplication\MyStackListConsoleApplication\obj\Debug\MyStackListConsoleApplication.exe
+c:\users\adam\documents\visual studio 2013\Projects\MyStackListConsoleApplication\MyStackListConsoleApplication\obj\Debug\MyStackListConsoleApplication.pdb
+C:\Users\Adam\Documents\CS 311 - Algorithms\MyStackListConsoleApplication\MyStackListConsoleApplication\bin\Debug\MyStackListConsoleApplication.exe.config
+C:\Users\Adam\Documents\CS 311 - Algorithms\MyStackListConsoleApplication\MyStackListConsoleApplication\obj\Debug\MyStackListConsoleApplication.exe
+C:\Users\Adam\Documents\CS 311 - Algorithms\MyStackListConsoleApplication\MyStackListConsoleApplication\obj\Debug\MyStackListConsoleApplication.pdb
+C:\Users\Adam\Documents\CS 311 - Algorithms\MyStackListConsoleApplication\MyStackListConsoleApplication\bin\Debug\MyStackListConsoleApplication.exe
+C:\Users\Adam\Documents\CS 311 - Algorithms\MyStackListConsoleApplication\MyStackListConsoleApplication\bin\Debug\MyStackListConsoleApplication.pdb
+C:\Users\Adam\Documents\CS 311 - Algorithms\MyStackListConsoleApplication\MyStackListConsoleApplication\obj\Debug\MyStackListConsoleApplication.csprojResolveAssemblyReference.cache
