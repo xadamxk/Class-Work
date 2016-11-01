@@ -1,6 +1,6 @@
 # Binary Search Tree Graphic Application
 <p align="center">
-Used to create a binary trees for pre-order,in-order, and post-order transversals.
+Used to create a binary tree for pre-order,in-order, and post-order transversals.
 </p>
 
 <h3><b><big>Description</big></b></h3>
