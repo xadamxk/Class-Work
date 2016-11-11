@@ -12,8 +12,10 @@ A compilation of web pages using HTML, CSS, JS, and PHP.
 <ul><li><b>Assignment 5 (Card Dealer - PHP)</b> Deals a given number of players 5 cards from a 52 card deck.</li></ul>
 
 </li></ul>
+<h3><b><big>Screenshots & Features</big></b></h3>
 <p align="center">
 <a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Menu.png"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Menu.png" width="850" height="850" title="Menu Screenshot" /></a>
+Home page to access all assignments (pages) along with a site wide color picker.
 </p>
 
 <ul><li><h3><b><big>Key Concepts</big></b></h3>
