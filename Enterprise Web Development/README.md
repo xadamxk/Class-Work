@@ -4,7 +4,7 @@ A compilation of web pages using HTML, CSS, JS, and PHP.
 </p>
 
 <h3><b><big>Description</big></b></h3>
-Created in CIS 376 (Web Dev), these pages provide a variety of tools including:<ul><li><b>Recursion:</b> Used to shift between the BST's parents/children - useful for large 
+Created in CIS 376 (Web Dev), these pages provide a variety of tools including:
 <ul><li><b>Conversions (Assignment 1 - JS):</b> Converts temperatures, weights, volumes, and distances.</li></ul>
 <ul><li><b>Investment Calc (Assignment 2 - JS):</b> Calculates annual interest over a given period of time.</li></ul>
 <ul><li><b>Payment Terms (Assignment 3 - JS):</b> Calculates due dates of an order based on given number of days.</li></ul>
