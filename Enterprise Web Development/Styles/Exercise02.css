@@ -1,0 +1,81 @@
+body{
+    background-color: #FECC53;
+}
+#header{
+    text-align: center;
+}
+
+#header img{
+    display: block;
+    width: 175px;
+    height: 175px;
+    margin: 0 auto;
+    /*Offset Back Button*/
+    position: relative;
+    right: 55px;
+}
+
+#backButton{
+    font-size: 14px;
+    line-height: 30px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 85px;
+}
+
+#backButtonArrow{
+    font-size: 22px;
+}
+
+/*
+    Label & Textbox centering technique
+    http://stackoverflow.com/a/23530115
+
+*/
+
+.row{
+    width: 700px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#buttonRow{
+    text-align: center;
+}
+
+.row .label{
+    display: inline-block;
+    text-align: right;
+    width: 350px;
+    font-size: 20px;
+}
+
+#output{
+    text-align: center;
+}
+
+
+
+.container{
+    text-align: center;
+}
+
+
+.textBox{
+    width: 100px;
+}
+
+#selectOption{
+    text-align: center;
+}
+
+#body form button, input text{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 150px;
+    line-height: 25px;
+}
+

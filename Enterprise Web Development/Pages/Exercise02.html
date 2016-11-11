@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Assignment 2</title>
+	
+	<link rel="stylesheet" href="../Styles/Exercise02.css"/>
+    <!--<link rel="stylesheet" href="../Styles/RadioList.css" />-->
+    <script src="../Scripts/Exercise02.js"></script>
+		
+
+</head>
+<body>
+    <div id="page">
+		<div id="header">
+            <button id="backButton" onclick="location.href='../index.html';"><span id="backButtonArrow">←</span> HOME</button>
+            <img src="../Images/Exercise02.png" alt="Exercise02" />
+            <h1>Exercise 2</h1>
+            <h3>Investment Calculator</h3>
+		</div>
+		<div id="body">
+			<form>
+                <!--Desired Amount-->
+                <div class="row">
+                    <label for="desiredAmt" class="label">Desired Amount to Retire:</label>
+                    <input type="text" name="desiredAmt" id="desiredAmt" class="textBox" /><br />
+                </div>
+                <!--Initial Investment-->
+                <div class="row">
+                    <label for="initInvest" class="label">Initial Investment:</label>
+                    <input type="text" name="initInvest" id="initInvest" class="textBox" /><br />
+                </div>
+                    <!--Annual Contribution-->
+                <div class="row">
+                    <label for="annContr" class="label">Annual Contribution:</label>
+                    <input type="text" name="annContr" id="annContr" class="textBox" /><br />
+                </div>
+                <div class="row">
+                    <!--Interest Rate-->
+                    <label class="label" id="intRateLabel">Interest Rate:</label><br />
+                </div>
+                <div class="container">
+                    <input type="radio" id="1perc" value=".01" name="intRate" onclick="unlockBox()" /><label class="radioLabel" for="1perc">1%</label>
+                    <br />
+                    <input type="radio" id="2perc" value=".02" name="intRate" onclick="unlockBox()" /><label class="radioLabel" for="2perc">2%</label>
+                    <br />
+                    <input type="radio" id="3perc" value=".03" name="intRate" onclick="unlockBox()" /><label class="radioLabel" for="3perc">3%</label>
+                    <br />
+                    <input type="radio" id="cust" value="4" name="intRate" onclick="unlockBox()" /> <label class="radioLabel" for="cust">Custom% <input type="text" id="custVal" class="textBox" disabled /></label>
+    <br />
+
+
+    <!--
+    <ul>
+        <li>
+            <input type="radio" id="1perc" name="selector" />
+            <label for="1perc">1 %</label>
+
+            <div class="check"></div>
+        </li>
+
+        <li>
+            <input type="radio" id="2perc" name="selector" />
+            <label for="2perc">2 %</label>
+
+            <div class="check"><div class="inside"></div></div>
+        </li>
+
+        <li>
+            <input type="radio" id="3perc" name="selector" />
+            <label for="3perc">3 %</label>
+
+            <div class="check"><div class="inside"></div></div>
+        </li>
+    </ul>-->
+</label></div>
+                <div class="row" id="buttonRow">
+                    <button type="button" id="reload" onclick="reloadPage()">Refresh Page</button> 
+                    <button type="button" id="calc" onclick="calcResults()">Calculate</button>
+                </div>
+                <div class="row" id="output">
+                    <label id="yearTag"></label>
+                    <br />
+                    <label id="totalTag"></label>
+                </div>
+            </form>
+		</div>
+		<div id="footer">
+		</div>
+    </div>
+</body>
+</html>

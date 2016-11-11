@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-------------------------------------------TODO------------------------------------------------
+    TODO: Add space below body to make sticky footer space correctly.
+    TODO: Add "Reset" button to color picker - return to default color.
+    TODO: Add footer to every page.
+    -----------------------------------------DONE------------------------------------------------
+    DONE: Add setting/memory for background color picker
+    DONE: Match "Background Color" button color to selected background color on page load
+    DONE: Make "complement" background color for menu mouseover based on background selected
+        DONE: Change CSS post page load using JS - mouseover complement^
+        DONE: Method to convert RGB->HEX (https://www.sitepoint.com/jquery-convert-rgb-hex-color/)
+    DONE: Figure out "sticky" footer (https://css-tricks.com/couple-takes-sticky-footer/)
+    DONE: Format decimals as currency in JS (http://stackoverflow.com/a/2901298)
+    -----------------------------------------IDEA------------------------------------------------
+    IDEA: http://git.blivesta.com/animsition/
+    IDEA: Radio Boxs: https://codepen.io/AngelaVelasquez/pen/Eypnq
+    IDEA: Numeral.js for decimals
+    ----------------------------------------CREDIT-----------------------------------------------
+    CRDT: Main Selection Menu: https://designshack.net/articles/css/5-simple-and-practical-css-list-styles-you-can-copy-and-paste/
+    CRDT: JS Color Picker: http://jscolor.com
+    CRDT: jQuery v3.1.0: https://jquery.com/
+    CRDT: Jquery mouseover fix: http://stackoverflow.com/questions/11371550/change-hover-css-properties-with-javascript
+    CRDT: Color Complement Algorithm: http://stackoverflow.com/a/1664186
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Home Menu</title>
+	
+    <!-- Styles -->
+	<link rel="stylesheet" href="Styles/Main.css"/>
+    <link rel="stylesheet" href="Styles/AssignmentList.css"/>
+
+    <!-- Scripts -->
+    <script src="Scripts/jscolor.js"></script>
+    <script src="Scripts/index.js"></script>
+    <script src="Scripts/jquery-3.1.0.min.js"></script>
+		
+</head>
+<body>
+    <div id="page">
+		<div id="header">
+            <img src="Images/JavaScript_Header1.gif" alt="JavaScript Header" />
+            <h1>Programming for Enterprise Web Development</h1>
+            <p id="name_Menu">Adam Koewler<br />Class Menu</p>
+            <!-- This is some dark magic shit-->
+            <div id="colorButton"><button class="jscolor {valueElement:null,
+                onFineChange:'update(this)',closable:true,closeText:'Save'}" 
+                style="border:2px solid black">Background Color</button></div>
+        </div>
+		<div id="body">
+            <div id="assignments">
+                <ul class="assignmentList">
+                    <!-- Assignment 1 -->
+                    <li class="listItems">
+                        <a href="Pages/Exercise01.html">
+                            <img src="Images/Exercise01.png" alt="Exercise01" />
+                            <h3>Assignment 1</h3>
+                            <p>A multi-page site used to convert:
+                                <br />
+                            Temperatures, Weights, Volumes, and Distances.</p>
+                        </a>
+                    </li>
+                    
+                    <li class="listItems">
+                        <a href="Pages/Exercise02.html">
+                            <img src="Images/Exercise02.png" alt="Exercise02" />
+                            <h3>Assignment 2</h3>
+                            <p>An investment calculator to calculate annual interest over a given period of time.</p>
+                        </a>
+                    </li>
+                    <li class="listItems">
+                        <a href="Pages/Exercise03.html">
+                            <img src="Images/Exercise03.png" alt="Exercise03" />
+                            <h3>Assignment 3</h3>
+                            <p>A tool used to calculate the due dates of an order based on a given number of days.</p>
+                        </a>
+                    </li>
+                    <li class="listItems">
+                        <a href="Pages/Exercise04.html">
+                            <img src="Images/Exercise04.png" alt="Exercise04" />
+                            <h3>Assignment 4</h3>
+                            <p>An order form to calulcate the total cost of an order.</p>
+                        </a>
+                    </li>
+                    <li class="listItems">
+                        <a href="Pages/Exercise05.html">
+                            <img src="Images/Exercise05.png" alt="Exercise05" />
+                            <h3>Assignment 5</h3>
+                            <p>An utility to randomly deal cards to a designated number of players.</p>
+                        </a>
+                    </li>
+                    <li class="listItems">
+                        <a href="Pages/Exercise06.html">
+                            <img src="Images/Exercise06.png" alt="Exercise06" />
+                            <h3>Assignment 6</h3>
+                            <p>Description.</p>
+                        </a>
+                    </li>
+                </ul>
+                <br />
+                <br />
+                <br />
+            </div>
+		</div>
+		<div id="footer">
+		<p>© COPYRIGHT 2016 xadamxk, Inc.</p>
+		</div>
+    </div>
+</body>
+</html>

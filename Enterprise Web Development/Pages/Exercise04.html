@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Assignment 4</title>
+	
+	<link rel="stylesheet" href="../Styles/Exercise04.css"/>
+    <script src="../Scripts/Exercise04.js"></script>
+		
+
+</head>
+<body>
+    <div id="page">
+		<div id="header">
+            <button id="backButton" onclick="location.href='../index.html';"><span id="backButtonArrow">←</span> HOME</button>
+            <img src="../Images/Exercise04.png" alt="Exercise04" />
+            <h1>Exercise 4</h1>
+            <h3>Order Form</h3>
+		</div>
+		<div id="body">
+			<form>
+                <div class="row" id="outputDiv">
+                    <label id="outputString">Total:</label>
+                    <br /><br />
+                </div>
+                <fieldset>
+                    <legend>Make Your Cake!</legend>
+                    <input type="radio" name="size" value="20" id="20" checked /> <label for="20">Round Cake 6" - Serves 8 ($20)</label>
+                    <br />
+                    <input type="radio" name="size" value="25" id="25" /> <label for="25">Round Cake 8" - Serves 12 ($25)</label>
+                    <br />
+                    <input type="radio" name="size" value="35" id="35" /> <label for="35">Round Cake 10" - Serves 16 ($35)</label>
+                    <br />
+                    <input type="radio" name="size" value="75" id="75" /> <label for="75">Round Cake 12" - Serves 30 ($75)</label>
+                    <br />
+                    <br />
+                    <label for="filling">Filling</label>
+                    <select id="filling">
+                        <option value="0">No Filling ($0)</option>
+                        <option value="5">Rasberries ($5)</option>
+                        <option value="10">Ice Cream ($10)</option>
+                        <option value="15">Toe Nails ($15)</option>
+                    </select>
+                    <br />
+                    <br />
+                    <input type="checkbox" name="candies" value="5" id="candies" /> <label for="candies">Include Candies ($5)</label>
+                    <br />
+                    <br />
+                    <input type="checkbox" name="inscription" value="20" id="inscription" onclick="toggleCheckbox()" /> <label for="inscription">Include Inscription ($20)</label>
+                    <input type="text" name="inscription" placeholder="Enter Inscription" id="inscriptionString" disabled/>
+                 </fieldset>
+                <fieldset>
+                    <legend>Contact Details</legend>
+                    <label for="nameSpace">Name</label>
+                    <br />
+                    <input type="text" id="nameSpace" />
+                    <br />
+                    <label for="addr">Address</label>
+                    <br />
+                    <input type="text" id="addr" />
+                    <br />
+                    <label for="phone">Phone</label>
+                    <br />
+                    <input type="text" id="phone" />
+                    <br />
+                </fieldset>
+                <div class="row">
+                    <button type="button" id="calc" onclick="submitForm()">Submit</button> <button type="button" id="reload" onclick="reloadPage()">Refresh</button>
+                </div>
+            </form>
+		</div>
+		<div id="footer">
+		</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+body, html{
+  height: 100%;
+}
+
+.container{
+  display: block;
+  position: absolute;
+  margin: auto;
+  height: 150px;
+  width: 400px;
+  bottom: 0; left:0; right: 0; top:0;
+  padding: 0;
+}
+
+
+.container ul{
+  list-style: none;
+  width: 100%;
+  margin-top: 50px;
+  padding: 0;
+}
+
+
+ul li{
+  display: block;
+  position: relative;
+  float: left;
+  top: 40px;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid #111111;
+}
+
+ul li input[type=radio]{
+  position: absolute;
+  visibility: hidden;
+}
+
+ul li label{
+    /*This is everything WHEN UNCHECKED*/
+  color: black;
+  display: block;
+  position: relative;
+  font-size: 1.35em;
+  padding: 25px 25px 25px 80px;
+  bottom: 17px;
+  z-index: 9;
+  cursor: pointer;
+  -webkit-transition: all 0.25s linear;
+}
+
+ul li .check{
+    /*This is the circle around the checkbox WHEN UNCHECKED*/
+  display: block;
+  position: absolute;
+  border: 5px solid orange;
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+  top: 8px;
+  left: 20px;
+	z-index: 5;
+	transition: border .25s linear;
+	-webkit-transition: border .25s linear;
+}
+
+ul li:hover .check {
+    /*This is the mouseover for circles
+        Alternate?
+    */
+  border: 5px solid red;
+}
+
+ul li .check::before {
+  display: block;
+  position: absolute;
+	content: '';
+  border-radius: 100%;
+  height: 11px;
+  width: 11px;
+  top: 2px;
+  left: 2px;
+  margin: auto;
+	transition: background 0.25s linear;
+	-webkit-transition: background 0.25s linear;
+}
+
+input[type=radio]:checked ~ .check {
+    /*This is the circle around the checkbox WHEN CHECKED
+        Alternate?
+    */
+  border: 5px solid #0DFF92;
+}
+
+input[type=radio]:checked ~ .check::before{
+    /*This is the circle in the checkbox WHEN CHECKED
+        Alternate?
+    */
+  background: #0DFF92;
+}
+
+input[type=radio]:checked ~ label{
+    /*This is the label WHEN CHECKED
+        Alternate?
+    */
+  color: #0DFF92;
+}

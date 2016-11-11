@@ -1,0 +1,52 @@
+body{
+    /*background-color: #FECC53;*/
+}
+
+#colorButton{
+    text-align: center;
+}
+
+
+.jscolor{
+    line-height: 26px;
+}
+
+#header img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 211px;
+    width: 375px;
+}
+
+h1{
+    font-size: 34px;
+    text-align: center;
+    color: black;
+}
+
+#name_Menu{
+    font-size: 26px;
+    text-align: center;
+}
+
+#spacer{
+    line-height: 50px;
+}
+
+#footer{
+    
+    padding-top: 1px;
+    display: block;
+    font-size: 18px;
+    vertical-align: middle;
+    background-color: #75767A;
+    height: 50px;
+    padding-left: 30px;
+    line-height: 18px; 
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    margin-bottom: 20px;
+}
+

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Assignment 1</title>
+	
+	<link rel="stylesheet" href="../Styles/Exercise01.css"/>
+    <script src="../Scripts/Exercise01.js"></script>
+		
+
+</head>
+<body>
+    <div id="page">
+		<div id="header">
+            <button id="backButton" onclick="location.href='../index.html';"><span id="backButtonArrow">←</span> HOME</button>
+            <img src="../Images/Exercise01.png" alt="Exercise01" />
+            <h1>Exercise 1</h1>
+            <h3>Conversions</h3>
+		</div>
+		<div id="body">
+			<form>
+                <div class="row"><button type="button" id="tempButton" onclick="setTemp()">Temperature</button> <button type="button" id="volButton" onclick="setVol()">Volume</button></div>
+                <br />
+                <div class="row"><button type="button" id="wtButton" onclick="setWt()">Weight</button> <button type="button" id="disButton" onclick="setDis()">Distance</button></div>
+                <p id="selectOption">(Select an Option Above)</p>
+                
+                <div class="row" id="InOut" style="visibility:hidden">
+                    <label for="input" id="inputLabel">In</label> &#8594 <label for="output" id="outputLabel">Out</label>
+                    <br />
+                    <input type="text" id="input" value=""/>
+                    <input type="text" id="output" value="" disabled="disabled" />
+                </div>
+                <div class="row" id="InOutButtons" style="visibility:hidden">
+                    <button type="button" id="calc" onclick="isInputValid()">Calculate</button> <button type="button" id="swap" onclick="swapInOuts()">Swap Units</button>
+                    <br />
+                    <button type="button" id="refresh" onclick="reloadPage()">Reset</button>
+                </div>
+            </form>
+		</div>
+		<div id="footer">
+		
+		</div>
+    </div>
+</body>
+</html>
