@@ -14,7 +14,7 @@ A compilation of web pages using HTML, CSS, JS, and PHP.
 </li></ul>
 <h3><b><big>Screenshots & Features</big></b></h3>
 <p align="center">
-<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Menu.png"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Menu.png" width="850" height="850" title="Menu Screenshot" /></a>
+<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Menu.png"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Menu.png" width="425" height="425" title="Menu Screenshot" /></a>
 <br />
 Home page to access all assignments (pages) along with a site wide color picker.
 <br />
