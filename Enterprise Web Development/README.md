@@ -11,7 +11,7 @@ Created in CIS 376 (Web Dev), these pages provide a variety of tools including:<
 <ul><li><b>Assignment 4 (Order Form - JS):</b> Order form to calculate total cost of an order.</li></ul>
 <ul><li><b>Assignment 5 (Card Dealer - PHP)</b> Deals a given number of players 5 cards from a 52 card deck.</li></ul>
 <p align="center">
-<a href=""><img src="" width="500" height="375" title="Menu Screenshot" /></a>
+<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Menu.png"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Menu.png" width="850" height="850" title="Menu Screenshot" /></a>
 </p>
 
 <h3><b><big>Key Concepts</big></b></h3>
