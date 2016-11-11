@@ -1,4 +1,4 @@
-# Enterprise Web Development Site Pages
+# Enterprise Web Development Web Site
 <p align="center">
 A compilation of web pages using HTML, CSS, JS, and PHP.
 </p>
