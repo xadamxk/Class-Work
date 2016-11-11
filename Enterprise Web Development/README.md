@@ -29,27 +29,27 @@ Color picker to set the background of all site pages.
 Interactive complement colors based on the color picker.
 <br />
 <br />
-<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Pages/Exercise01.html"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Exercise01Screenshot.png" width="360" height="440" title="Assignment 1 Screenshot" /></a>
+<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Scripts/Exercise01.js"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Exercise01Screenshot.png" width="360" height="440" title="Assignment 1 Screenshot" /></a>
 <br />
 Assignment 1
 <br />
 <br />
-<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Pages/Exercise02.html"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Exercise02Screenshot.png" width="366" height="481" title="Assignment 2 Screenshot" /></a>
+<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Scripts/Exercise02.js"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Exercise02Screenshot.png" width="366" height="481" title="Assignment 2 Screenshot" /></a>
 <br />
 Assignment 2
 <br />
 <br />
-<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Pages/Exercise03.html"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Exercise03Screenshot.png" width="263" height="310" title="Assignment 3 Screenshot" /></a>
+<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Scripts/Exercise03.js"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Exercise03Screenshot.png" width="263" height="310" title="Assignment 3 Screenshot" /></a>
 <br />
 Assignment 3
 <br />
 <br />
-<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Pages/Exercise04.html"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Exercise04Screenshot.png" width="321" height="519" title="Assignment 4 Screenshot" /></a>
+<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Scripts/Exercise04.js"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Exercise04Screenshot.png" width="321" height="519" title="Assignment 4 Screenshot" /></a>
 <br />
 Assignment 4
 <br />
 <br />
-<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Pages/Exercise05.html"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Exercise05Screenshot.png" width="505" height="322" title="Assignment 5 Screenshot" /></a>
+<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Pages/dealCards.php"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Exercise05Screenshot.png" width="505" height="322" title="Assignment 5 Screenshot" /></a>
 <br />
 Assignment 5
 <br />
