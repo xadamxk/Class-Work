@@ -1,6 +1,7 @@
 # Class Work
 <p align="center">
 Just a few examples of assignments I completed while in school.
+<br />
 Every assignment includes a screenshot - which is hyperlinked to the coresponding code snippet(s).
 </p>
 
