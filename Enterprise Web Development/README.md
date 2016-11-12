@@ -14,17 +14,17 @@ A compilation of web pages using HTML, CSS, JS, and PHP.
 </li></ul>
 <h3><b><big>Screenshots & Features</big></b></h3>
 <p align="center">
-<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Menu.png"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Menu.png" width="425" height="425" title="Menu Screenshot" /></a>
+<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/index.html"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Menu.png" width="425" height="425" title="Menu Screenshot" /></a>
 <br />
 Home page to access all assignments (pages) along with a site wide color picker.
 <br />
 <br />
-<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Color%20Picker.png"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Color%20Picker.png" width="320" height="234" title="Color Picker" /></a>
+<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Scripts/jscolor.js"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Color%20Picker.png" width="320" height="234" title="Color Picker" /></a>
 <br />
 Color picker to set the background of all site pages.
 <br />
 <br />
-<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Compliment.gif"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Compliment.gif" width="320" height="234" title="Compliment" /></a>
+<a href="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Scripts/index.js"><img src="https://github.com/xadamxk/Class-Work/blob/master/Enterprise%20Web%20Development/Images/Screenshots/Compliment.gif" width="320" height="234" title="Compliment" /></a>
 <br />
 Interactive complement colors based on the color picker.
 <br />
