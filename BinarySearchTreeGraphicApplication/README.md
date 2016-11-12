@@ -6,7 +6,7 @@ Used to create a binary tree for pre-order,in-order, and post-order transversals
 <h3><b><big>Description</big></b></h3>
 Created in CS 311 (Algorithms & Design), this application is meant to help users visualize Binary Search Trees (BSTs). BSTGA allows users to input integers (seperated by a comma), select which transversal type to structure the tree, along with several formatting options such as line color, line thickness, and node size. An example input and output is show below:
 <p align="center">
-<a href="https://raw.githubusercontent.com/xadamxk/Class-Work/master/BinarySearchTreeGraphicApplication/BSTGAScreenshot.png"><img src="https://raw.githubusercontent.com/xadamxk/Class-Work/master/BinarySearchTreeGraphicApplication/BSTGAScreenshot.png" width="500" height="375" title="BSTGA Screenshot" /></a>
+<a href="https://github.com/xadamxk/Class-Work/blob/master/BinarySearchTreeGraphicApplication/BinarySearchTreeGraphicApplication/Form1.cs"><img src="https://raw.githubusercontent.com/xadamxk/Class-Work/master/BinarySearchTreeGraphicApplication/BSTGAScreenshot.png" width="500" height="375" title="BSTGA Screenshot" /></a>
 </p>
 
 <ul><li><h3><b><big>Key Concepts</big></b></h3>
