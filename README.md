@@ -3,7 +3,12 @@
 Just a few examples of assignments I completed while in school.
 <br />
 Every assignment includes a screenshot - which is hyperlinked to the coresponding code snippet(s).
+<br />
+<a href=""><img src="https://github.com/xadamxk/Class-Work/blob/master/ClassWork.png" width="150" height="150" title="Project Icon"  /></a>
+<br />
 </p>
+
+
 
 
 <h3><b><big>Assignments</big></b></h3>
