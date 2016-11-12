@@ -6,5 +6,5 @@ Console program to calculate basic arithmetic for postfix equations using Stack 
 <h3><b><big>Screenshot</big></b></h3>
 
 <p align="center">
-<a href="https://raw.githubusercontent.com/xadamxk/Class-Work/master/BinarySearchTreeGraphicApplication/BSTGAScreenshot.png"><img src="https://raw.githubusercontent.com/xadamxk/Class-Work/master/BinarySearchTreeGraphicApplication/BSTGAScreenshot.png" width="500" height="375" title="BSTGA Screenshot" /></a>
+<a href=""><img src="https://github.com/xadamxk/Class-Work/blob/master/MyStackListConsoleApplication/MyStackListScreenshot.png" title="PostStack Screenshot" /></a>
 </p>
