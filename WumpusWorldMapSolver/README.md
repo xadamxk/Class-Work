@@ -5,6 +5,7 @@ GUI Application to solve Wumpus World Maps.
 
 <h3><b><big>Description</big></b></h3>
 Created in CS 461 (Artificial Intelligence), this application solves Wumpus World Maps. The goal of Wumpus World is to get the gold, kill the Wumpus, and return to the entry point (<a href="https://cis.temple.edu/~giorgio/cis587/readings/wumpus.shtml">More Info</a>). Cells adjacent to pits give a breeze, the Wumpus gives a stench, and the gold gives glitter. This application compares and maps these states throughout the game to determine the next move. Below are screenshots of various map difficulties: 
+
 <details> 
   <summary>Hard Map</summary>
   <p align="center">
@@ -27,5 +28,15 @@ Created in CS 461 (Artificial Intelligence), this application solves Wumpus Worl
 </details>
 </p>
 
-Code: GridWorldCode/framework/WumpusRunner.java
-Map:  GridWorldCode/framework/info/gridworld/world/WumpusWorld.java
+
+Code for runner agent: <a href="https://github.com/xadamxk/Class-Work/blob/master/WumpusWorldMapSolver/GridWorldCode/framework/info/gridworld/actor/RandomAgent.java">Here</a>
+Code for Wumpus map: <a href="https://github.com/xadamxk/Class-Work/blob/master/WumpusWorldMapSolver/GridWorldCode/framework/info/gridworld/world/WumpusWorld.java">Here</a>
+
+<ul><li><h3><b><big>Key Concepts</big></b></h3>
+<ul><li><b>Recursion:</b> Used to navigate throughout the Wumpus World Map.</li></ul>
+<ul><li><b>Backtracking:</b> Stack used to track movements incase of dangers on Wumpus Map.</li></ul>
+<ul><li><b>Other Basic AI Concepts:</b> Several other methods are used throughout this project, feel free to look at the code.</li></ul>
+
+
+</li></ul>
+
