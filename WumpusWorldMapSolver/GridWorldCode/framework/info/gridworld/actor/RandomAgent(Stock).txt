@@ -1,0 +1,113 @@
+/* 
+ * AP(r) Computer Science GridWorld Case Study:
+ * Copyright(c) 2005-2006 Cay S. Horstmann (http://horstmann.com)
+ *
+ * This code is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation.
+ *
+ * This code is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * @author Cay Horstmann
+ * @modified 2011 Scott Anderson
+ */
+	
+   package info.gridworld.actor;
+
+   import info.gridworld.grid.Grid;
+   import info.gridworld.grid.Location;
+   import info.gridworld.actor.*;
+
+   import java.awt.Color;
+   import java.util.ArrayList;
+
+/**
+ * A <code>Bug</code> is an actor that can move and turn. It drops flowers as
+ * it moves. <br />
+ * The implementation of this class is testable on the AP CS A and AB exams.
+ */
+   public class RandomAgent extends Actor
+   {
+   
+      boolean VisitedMap[][];
+      int numRows = 0;
+      int numCols = 0;
+   	
+    /**
+     * Constructs a red Agent.
+     */
+      public RandomAgent(int NumRows, int NumCols)
+      {
+         setColor(Color.RED);
+      
+         numRows = NumRows;
+         numCols = NumCols;   
+         Grid<Actor> gr = getGrid();
+         VisitedMap = new boolean[NumRows][NumCols];
+         for (int r=0; r<NumRows; r++)
+         {
+            for (int c=0; c<NumCols; c++)
+            {
+               VisitedMap[r][c] = false;
+            }
+         }
+      }
+   
+    /**
+     * Moves if it can move.
+     */
+      public void act()
+      {
+         Grid<Actor> gr = getGrid();	
+         VisitedMap[getLocation().getRow()][getLocation().getCol()] = true;
+         
+         // if ASK(KB, Glitter)         	
+         if (gr.getGlitter(getLocation()))
+         {
+            gr.grabGold(getLocation());
+            moveTo(new Location(gr.getNumRows()-1,0));
+            gr.climb(new Location(gr.getNumRows()-1,0));
+            removeSelfFromGrid();
+         }
+         else
+         {
+            
+            boolean moved = false;
+            
+            // find unvisited location
+            //get adjacent squares
+            ArrayList<Location> adjLocs = gr.getValidTrueAdjacentLocations(getLocation());
+            //which are OK?
+            //if there is an OK, move there
+            for (Location choice : adjLocs)
+            {
+               //visted previously?
+               if (VisitedMap[choice.getRow()][choice.getCol()])
+               {
+               }
+               else
+               {
+                  moveTo(choice);
+                  moved = true;
+               }
+               if (moved) 
+                  break;
+            }
+            
+         } 
+      }
+
+      public void report()
+      {   
+         Grid<Actor> gr = getGrid();	
+         System.out.println();
+			System.out.println();   
+         System.out.println("AT ("+getLocation().getRow()+","+getLocation().getCol()+")");
+         System.out.println("Stench="+gr.getStench(getLocation()));
+         System.out.println("Breeze="+gr.getBreeze(getLocation())); 	
+      }
+     
+   }
