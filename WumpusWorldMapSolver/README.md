@@ -15,14 +15,14 @@ GUI Application to solve Wumpus World Maps.
 <details> 
   <summary>Intermediate Map</summary>
   <p align="center">
-    <img src="" title="WWS Screenshot2" />
+    <img src="https://raw.githubusercontent.com/xadamxk/Class-Work/master/WumpusWorldMapSolver/Example2.gif" title="WWS Screenshot2" />
   </p>
 </details>
 
 <details> 
   <summary>Easy Map</summary>
   <p align="center">
-    <img src="" title="WWS Screenshot3" />
+    <img src="https://raw.githubusercontent.com/xadamxk/Class-Work/master/WumpusWorldMapSolver/Example3.gif" title="WWS Screenshot3" />
   </p>
 </details>
 </p>
