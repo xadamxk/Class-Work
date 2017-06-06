@@ -1,6 +1,6 @@
 # Wumpus World Solver
 <p align="center">
-GUI Application to solve Wumpus World Maps.
+GUI Application to solve Wumpus World Maps using basic AI concepts.
 </p>
 
 <h3><b><big>Description</big></b></h3>
