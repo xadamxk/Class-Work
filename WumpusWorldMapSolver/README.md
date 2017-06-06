@@ -3,8 +3,8 @@
 GUI Application to solve Wumpus World Maps.
 </p>
 
-<h3><b><big>Screenshot</big></b></h3>
-
+<h3><b><big>Description</big></b></h3>
+Created in CS 461 (Artificial Intelligence), this application solves Wumpus World Maps. The goal of Wumpus World is to get the gold, kill the Wumpus, and return to the entry point (<a href="https://cis.temple.edu/~giorgio/cis587/readings/wumpus.shtml">More Info</a>). Cells adjacent to pits give a breeze, the Wumpus gives a stench, and the gold gives glitter. This application compares and maps these states throughout the game to determine the next move. Below are screenshots of various map difficulties: 
 <details> 
   <summary>Hard Map</summary>
   <p align="center">
