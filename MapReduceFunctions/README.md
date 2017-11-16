@@ -21,11 +21,11 @@ Below are the implementation methods:<ul>
 <h3><b><big>Results</big></b></h3>
 
 <p align="center">
-<img src="" title="Small Screenshot" />
+<img src="https://github.com/xadamxk/Class-Work/blob/master/MapReduceFunctions/Small.PNG?raw=true" title="Small Screenshot" />
 
-<img src="" title="Medium Screenshot" />
+<img src="https://github.com/xadamxk/Class-Work/blob/master/MapReduceFunctions/Medium.png?raw=true" title="Medium Screenshot" />
 
-<img src="" title="Large Screenshot" />
+<img src="https://github.com/xadamxk/Class-Work/blob/master/MapReduceFunctions/Large.png?raw=true" title="Large Screenshot" />
 
-<img src="" title="Comparison Screenshot" />
+<img src="https://github.com/xadamxk/Class-Work/blob/master/MapReduceFunctions/Summary.PNG?raw=true" title="Comparison Screenshot" />
 </p>
