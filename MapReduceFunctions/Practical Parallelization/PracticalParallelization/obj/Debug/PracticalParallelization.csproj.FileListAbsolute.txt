@@ -8,3 +8,6 @@ C:\Users\Adam\Desktop\Blog.Samples-master\Practical Parallelization\PracticalPar
 C:\Users\Adam\Desktop\Blog.Samples-master\Practical Parallelization\PracticalParallelization\bin\Debug\System.Threading.Tasks.Dataflow.xml
 C:\Users\Adam\Desktop\Blog.Samples-master\Practical Parallelization\PracticalParallelization\obj\Debug\PracticalParallelization.exe
 C:\Users\Adam\Desktop\Blog.Samples-master\Practical Parallelization\PracticalParallelization\obj\Debug\PracticalParallelization.pdb
+C:\Users\Adam\Documents\GitHub\Class-Work\MapReduceFunctions\Practical Parallelization\PracticalParallelization\bin\Debug\PracticalParallelization.exe.config
+C:\Users\Adam\Documents\GitHub\Class-Work\MapReduceFunctions\Practical Parallelization\PracticalParallelization\obj\Debug\PracticalParallelization.exe
+C:\Users\Adam\Documents\GitHub\Class-Work\MapReduceFunctions\Practical Parallelization\PracticalParallelization\obj\Debug\PracticalParallelization.pdb
