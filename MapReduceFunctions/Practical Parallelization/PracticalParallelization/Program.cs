@@ -14,7 +14,7 @@
     internal class Program
     {
         private const uint SanityCountToMatch = 4230497;
-        private const uint TopCount = 100;
+        private const uint TopCount = 50;
 
         //private static readonly FileInfo InputFile = new FileInfo(@"C:\Users\Adam\Desktop\Blog.Samples-master\Large Data\Dummys Guide to the Internet.txt");
         private static readonly FileInfo InputFile = new FileInfo(@"C:\Users\Adam\Desktop\Blog.Samples-master\Large Data\Test Data 1.txt");
@@ -29,82 +29,78 @@
 
             words = GetTopWordsSequential();
             stopWatch.Stop();
-            Console.Write("1. Sequential: " + stopWatch.ElapsedMilliseconds);
+            Console.Write("1. Sequential: " + stopWatch.ElapsedMilliseconds + " ms");
             stopWatch.Reset();
 
             stopWatch.Start();
             words = GetTopWordsSequentialLINQ();
             stopWatch.Stop();
-            Console.Write("\n2. Sequential LINQ: " + stopWatch.ElapsedMilliseconds);
+            Console.Write("\n2. Sequential LINQ: " + stopWatch.ElapsedMilliseconds + " ms");
             stopWatch.Reset();
 
             stopWatch.Start();
             words = GetTopWordsPLINQNaive();
             stopWatch.Stop();
-            Console.Write("\n3. Parallel LINQ Native: " + stopWatch.ElapsedMilliseconds);
+            Console.Write("\n3. Parallel LINQ Native: " + stopWatch.ElapsedMilliseconds + " ms");
             stopWatch.Reset();
 
             stopWatch.Start();
             words = GetTopWordsPLINQ();
             stopWatch.Stop();
-            Console.Write("\n4. Parallel LINQ: " + stopWatch.ElapsedMilliseconds);
+            Console.Write("\n4. Parallel LINQ: " + stopWatch.ElapsedMilliseconds + " ms");
             stopWatch.Reset();
 
             stopWatch.Start();
             words = GetTopWordsPLINQMapReduce();
             stopWatch.Stop();
-            Console.Write("\n5. Parallel LINQ Map/Reduce: " + stopWatch.ElapsedMilliseconds);
+            Console.Write("\n5. Parallel LINQ Map/Reduce: " + stopWatch.ElapsedMilliseconds + " ms");
             stopWatch.Reset();
 
             stopWatch.Start();
             words = GetTopWordsPLINQConcurrentDictionary();
             stopWatch.Stop();
-            Console.Write("\n6. Parallel LINQ Concurrent Dictionary: " + stopWatch.ElapsedMilliseconds);
+            Console.Write("\n6. Parallel LINQ Concurrent Dictionary: " + stopWatch.ElapsedMilliseconds + " ms");
             stopWatch.Reset();
 
             stopWatch.Start();
             words = GetTopWordsPLINQProducerConsumer();
             stopWatch.Stop();
-            Console.Write("\n7. Parallel LINQ Producer/Consumer: " + stopWatch.ElapsedMilliseconds);
+            Console.Write("\n7. Parallel LINQ Producer/Consumer: " + stopWatch.ElapsedMilliseconds + " ms");
             stopWatch.Reset();
 
             stopWatch.Start();
             words = GetTopWordsParallelForEachMapReduce();
             stopWatch.Stop();
-            Console.Write("\n8. Parallel ForEach Map/Reduce: " + stopWatch.ElapsedMilliseconds);
+            Console.Write("\n8. Parallel ForEach Map/Reduce: " + stopWatch.ElapsedMilliseconds + " ms");
             stopWatch.Reset();
 
             stopWatch.Start();
             words = GetTopWordsParallelForEachConcurrentDictionary();
             stopWatch.Stop();
-            Console.Write("\n9. Parallel ForEach Concurrent Dictionary: " + stopWatch.ElapsedMilliseconds);
+            Console.Write("\n9. Parallel ForEach Concurrent Dictionary: " + stopWatch.ElapsedMilliseconds + " ms");
             stopWatch.Reset();
 
             stopWatch.Start();
             words = GetTopWordsProducerConsumer();
             stopWatch.Stop();
-            Console.Write("\n10. Producer/Consumer: " + stopWatch.ElapsedMilliseconds);
+            Console.Write("\n10. Producer/Consumer: " + stopWatch.ElapsedMilliseconds + " ms");
             stopWatch.Reset();
 
             stopWatch.Start();
             words = GetTopWordsProducerConsumerEasier();
             stopWatch.Stop();
-            Console.Write("\n11. Producer/Consumer Simplified: " + stopWatch.ElapsedMilliseconds);
+            Console.WriteLine("\n11. Producer/Consumer Simplified: " + stopWatch.ElapsedMilliseconds + " ms");
             stopWatch.Reset();
 
             stopWatch.Start();
             words = GetTopWordsDataFlow();
             stopWatch.Stop();
-            Console.Write("\n12. Data Flow: " + stopWatch.ElapsedMilliseconds);
             stopWatch.Reset();
-            
-
-            Console.ReadKey();
 
 
-
+            /*
             var sanityCount = (uint)words.Sum(pair => pair.Value);
-            if (sanityCount == sanityCount)
+            if (sanityCount != sanityCount)
             {
                 using (var process = Process.GetCurrentProcess())
                 {
@@ -120,6 +116,14 @@
             {
                 Console.WriteLine("Invalid results, expected a sanity count of: {0} but got: {1}",
                     SanityCountToMatch.ToString("n0"), sanityCount.ToString("n0"));
+            }
+            */
+            // Print top 15 words
+            Console.WriteLine("Word: Count");
+            foreach (KeyValuePair<string, uint> kvp in words)
+            {
+                //textBox3.Text += ("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
+                Console.WriteLine(string.Format("{0}: {1}", kvp.Key, kvp.Value));
             }
             Console.Write("\n\nDone.");
             Console.ReadKey();
