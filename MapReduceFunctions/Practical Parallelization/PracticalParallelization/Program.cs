@@ -122,7 +122,6 @@
             Console.WriteLine("Word: Count");
             foreach (KeyValuePair<string, uint> kvp in words)
             {
-                //textBox3.Text += ("Key = {0}, Value = {1}", kvp.Key, kvp.Value);
                 Console.WriteLine(string.Format("{0}: {1}", kvp.Key, kvp.Value));
             }
             Console.Write("\n\nDone.");
@@ -131,18 +130,21 @@
 
         private static IDictionary<string, uint> GetTopWordsSequential()
         {
-            //Console.WriteLine(nameof(GetTopWordsSequential) + "...");
-
+            // Initialize Result Dictionary
             var result = new Dictionary<string, uint>(StringComparer.InvariantCultureIgnoreCase);
+            // Loop through lines in file
             foreach (var line in File.ReadLines(InputFile.FullName))
             {
+                // Loop through words in lines
                 foreach (var word in line.Split(Separators, StringSplitOptions.RemoveEmptyEntries))
                 {
+                    // Check word in blacklist
                     if (!IsValidWord(word)) { continue; }
+                    // Track word
                     TrackWordsOccurrence(result, word);
                 }
             }
-
+            // Return ordered dictionary
             return result
                 .OrderByDescending(kv => kv.Value)
                 .Take((int)TopCount)
@@ -151,8 +153,7 @@
 
         private static IDictionary<string, uint> GetTopWordsSequentialLINQ()
         {
-            //Console.WriteLine(nameof(GetTopWordsSequentialLINQ) + "...");
-
+            // Return ordered dictionary
             return File.ReadLines(InputFile.FullName)
                 .SelectMany(l => l.Split(Separators, StringSplitOptions.RemoveEmptyEntries))
                 .Where(IsValidWord)
@@ -165,19 +166,20 @@
 
         private static IDictionary<string, uint> GetTopWordsPLINQNaive()
         {
-            //Console.WriteLine(nameof(GetTopWordsPLINQNaive) + "...");
-
+            // Initalize words array by reading from file in paralll
             var words = File.ReadLines(InputFile.FullName)
                 .AsParallel()
                 .SelectMany(l => l.Split(Separators, StringSplitOptions.RemoveEmptyEntries))
                 .Where(IsValidWord);
-
+            // Initialize results dictionary
             var result = new Dictionary<string, uint>(StringComparer.InvariantCultureIgnoreCase);
             foreach (var word in words)
             {
+                // Track word
                 TrackWordsOccurrence(result, word);
             }
 
+            // Return ordered dictionary
             return result
                 .OrderByDescending(kv => kv.Value)
                 .Take((int)TopCount)
@@ -186,8 +188,7 @@
 
         private static IDictionary<string, uint> GetTopWordsPLINQ()
         {
-            //Console.WriteLine(nameof(GetTopWordsPLINQ) + "...");
-
+            // Return ordered dictionary
             return File.ReadLines(InputFile.FullName)
                 .AsParallel()
                 .SelectMany(l => l.Split(Separators, StringSplitOptions.RemoveEmptyEntries))
@@ -202,22 +203,26 @@
 
         private static IDictionary<string, uint> GetTopWordsPLINQMapReduce()
         {
-            //Console.WriteLine(nameof(GetTopWordsPLINQMapReduce) + "...");
-
+            // Return ordered dictionary
             return File.ReadLines(InputFile.FullName)
                 .AsParallel()
+                // Let C# decide max degree
                 //.WithDegreeOfParallelism(12)
                 .Aggregate(
                     () => new Dictionary<string, uint>(StringComparer.InvariantCultureIgnoreCase), //#1
                     (localDic, line) => //#2
                     {
+                        // Ignore seperator characters
                         foreach (var word in line.Split(Separators, StringSplitOptions.RemoveEmptyEntries))
                         {
+                            // Check word is blacklist
                             if (!IsValidWord(word)) { continue; }
+                            // Track word
                             TrackWordsOccurrence(localDic, word);
                         }
                         return localDic;
                     },
+                    // Take result and sort by key/value pair
                     (finalResult, localDic) => //#3
                     {
                         foreach (var pair in localDic)
@@ -234,6 +239,7 @@
                         }
                         return finalResult;
                     },
+                    // Return ordered dictionary
                     finalResult => finalResult //#4
                         .OrderByDescending(kv => kv.Value)
                         .Take((int)TopCount)
@@ -243,21 +249,23 @@
 
         private static IDictionary<string, uint> GetTopWordsPLINQConcurrentDictionary()
         {
-            //Console.WriteLine(nameof(GetTopWordsPLINQConcurrentDictionary) + "...");
-
+            // Initalize result dictionary
             var result = new ConcurrentDictionary<string, uint>(StringComparer.InvariantCultureIgnoreCase);
-
+            // Read from file by line in parallel
             File.ReadLines(InputFile.FullName)
                 .AsParallel()
                 .ForAll(line =>
                 {
+                    // Loop through each word, filter seperators
                     foreach (var word in line.Split(Separators, StringSplitOptions.RemoveEmptyEntries))
                     {
+                        // Valid word
                         if (!IsValidWord(word)) { continue; }
+                        // Update word list
                         result.AddOrUpdate(word, 1, (key, oldVal) => oldVal + 1);
                     }
                 });
-
+            // Return ordered dictionary
             return result
                 .OrderByDescending(kv => kv.Value)
                 .Take((int)TopCount)
@@ -266,10 +274,10 @@
 
         private static IDictionary<string, uint> GetTopWordsPLINQProducerConsumer()
         {
-            //Console.WriteLine(nameof(GetTopWordsPLINQProducerConsumer) + "...");
-
+            // Limtations
             const int WorkerCount = 12;
             const int BoundedCapacity = 10000;
+            // Initalize result dictionary
             var result = new ConcurrentDictionary<string, uint>(StringComparer.InvariantCultureIgnoreCase);
 
             // Setup the queue
@@ -278,9 +286,12 @@
             // Declare the worker
             Action<string> work = line =>
             {
+                // Loop words and filter seperators
                 foreach (var word in line.Split(Separators, StringSplitOptions.RemoveEmptyEntries))
                 {
+                    // Valid word
                     if (!IsValidWord(word)) { continue; }
+                    // Update word list
                     result.AddOrUpdate(word, 1, (key, oldVal) => oldVal + 1);
                 }
             };
@@ -302,7 +313,7 @@
                 .WithDegreeOfParallelism(WorkerCount)
                 .WithMergeOptions(ParallelMergeOptions.NotBuffered)
                 .ForAll(work);
-
+            // Return ordered dictionary
             return result
                 .OrderByDescending(kv => kv.Value)
                 .Take((int)TopCount)
@@ -311,18 +322,21 @@
 
         private static IDictionary<string, uint> GetTopWordsParallelForEachMapReduce()
         {
-            //Console.WriteLine(nameof(GetTopWordsParallelForEachMapReduce) + "...");
-
+            // Initalize result dictionary
             var result = new Dictionary<string, uint>(StringComparer.InvariantCultureIgnoreCase);
+            // Loop through lines in parallel
             Parallel.ForEach(
                 File.ReadLines(InputFile.FullName),
                 new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount },
                 () => new Dictionary<string, uint>(StringComparer.InvariantCultureIgnoreCase),
                 (line, state, index, localDic) =>
                 {
+                    // Loop through words, filter seperators
                     foreach (var word in line.Split(Separators, StringSplitOptions.RemoveEmptyEntries))
                     {
+                        // Valid word
                         if (!IsValidWord(word)) { continue; }
+                        // Update word list
                         TrackWordsOccurrence(localDic, word);
                     }
                     return localDic;
@@ -331,9 +345,11 @@
                 {
                     lock (result)
                     {
+                        // Organize pairs
                         foreach (var pair in localDic)
                         {
                             var key = pair.Key;
+                            // Increment matching keys
                             if (result.ContainsKey(key))
                             {
                                 result[key] += pair.Value;
@@ -346,7 +362,7 @@
                     }
                 }
             );
-
+            // Return ordered dictionary
             return result
                 .OrderByDescending(kv => kv.Value)
                 .Take((int)TopCount)
@@ -355,22 +371,25 @@
 
         private static IDictionary<string, uint> GetTopWordsParallelForEachConcurrentDictionary()
         {
-            //Console.WriteLine(nameof(GetTopWordsParallelForEachConcurrentDictionary) + "...");
-
+            // Initialize result dictionary
             var result = new ConcurrentDictionary<string, uint>(StringComparer.InvariantCultureIgnoreCase);
+            // Loop each line in parallel
             Parallel.ForEach(
                 File.ReadLines(InputFile.FullName),
                 new ParallelOptions { MaxDegreeOfParallelism = Environment.ProcessorCount },
                 (line, state, index) =>
                 {
+                    // Loop each word, filter seperators
                     foreach (var word in line.Split(Separators, StringSplitOptions.RemoveEmptyEntries))
                     {
+                        // Valid word
                         if (!IsValidWord(word)) { continue; }
+                        // Update word list
                         result.AddOrUpdate(word, 1, (key, oldVal) => oldVal + 1);
                     }
                 }
             );
-
+            // Return ordered dictionary
             return result
                 .OrderByDescending(kv => kv.Value)
                 .Take((int)TopCount)
@@ -379,8 +398,7 @@
 
         private static IDictionary<string, uint> GetTopWordsProducerConsumer()
         {
-            //Console.WriteLine(nameof(GetTopWordsProducerConsumer) + "...");
-
+            // Limitations
             const int WorkerCount = 12;
             const int BoundedCapacity = 10000;
             var result = new ConcurrentDictionary<string, uint>(StringComparer.InvariantCultureIgnoreCase);
@@ -391,11 +409,15 @@
             // Declare the worker
             Action work = () =>
             {
+                // Each line in selected block
                 foreach (var line in blockingCollection.GetConsumingEnumerable())
                 {
+                    // Each word in line, filter seperators
                     foreach (var word in line.Split(Separators, StringSplitOptions.RemoveEmptyEntries))
                     {
+                        // Valid word
                         if (!IsValidWord(word)) { continue; }
+                        // Update word list
                         result.AddOrUpdate(word, 1, (key, oldVal) => oldVal + 1);
                     }
                 }
@@ -415,7 +437,7 @@
 
             // Wait for workers to finish their work
             Task.WaitAll(tasks);
-
+            // Return ordered dictionary
             return result
                 .OrderByDescending(kv => kv.Value)
                 .Take((int)TopCount)
@@ -424,8 +446,7 @@
 
         private static IDictionary<string, uint> GetTopWordsProducerConsumerEasier()
         {
-            //Console.WriteLine(nameof(GetTopWordsProducerConsumerEasier) + "...");
-
+            // Limitations
             const int WorkerCount = 12;
             const int BoundedCapacity = 10000;
             var result = new ConcurrentDictionary<string, uint>(StringComparer.InvariantCultureIgnoreCase);
@@ -433,9 +454,12 @@
             // Declare the worker
             Action<string> work = line =>
             {
+                // Loop through words in line, filter seperators
                 foreach (var word in line.Split(Separators, StringSplitOptions.RemoveEmptyEntries))
                 {
+                    // Valid word
                     if (!IsValidWord(word)) { continue; }
+                    // Update word list
                     result.AddOrUpdate(word, 1, (key, oldVal) => oldVal + 1);
                 }
             };
@@ -454,7 +478,7 @@
 
             // Wait for workers to finish their work
             pcq.Completion.Wait();
-
+            // Return ordered dictionary
             return result
                 .OrderByDescending(kv => kv.Value)
                 .Take((int)TopCount)
@@ -463,15 +487,16 @@
 
         private static IDictionary<string, uint> GetTopWordsDataFlow()
         {
-            //Console.WriteLine(nameof(GetTopWordsDataFlow) + "...");
-
+            // Limitations
             const int WorkerCount = 12;
             var result = new ConcurrentDictionary<string, uint>(StringComparer.InvariantCultureIgnoreCase);
             const int BoundedCapacity = 10000;
 
+            // Buffer blocks
             var bufferBlock = new BufferBlock<string>(
                 new DataflowBlockOptions { BoundedCapacity = BoundedCapacity });
             
+            // Split blocks into lines
             var splitLineToWordsBlock = new TransformManyBlock<string, string>(
                 line => line.Split(Separators, StringSplitOptions.RemoveEmptyEntries),
                 new ExecutionDataflowBlockOptions
@@ -484,9 +509,12 @@
             
             var trackWordsOccurrencBlock = new ActionBlock<string[]>(words =>
                 {
+                    // Loop words in lines
                     foreach (var word in words)
                     {
+                        // Valid word
                         if (!IsValidWord(word)) { continue; }
+                        // Update word list
                         result.AddOrUpdate(word, 1, (key, oldVal) => oldVal + 1);
                     }
                 }, 
@@ -508,7 +536,7 @@
 
             // Wait for workers to finish their work
             trackWordsOccurrencBlock.Completion.Wait();
-
+            // Return ordered dictionary
             return result
                 .OrderByDescending(kv => kv.Value)
                 .Take((int)TopCount)
@@ -518,10 +546,12 @@
         private static void TrackWordsOccurrence(IDictionary<string, uint> wordCounts, string word)
         {
             uint count;
+            // If existing, increment count
             if (wordCounts.TryGetValue(word, out count))
             {
                 wordCounts[word] = count + 1;
             }
+            // Else, make count 1
             else
             {
                 wordCounts[word] = 1;
