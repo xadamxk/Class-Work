@@ -1,7 +1,7 @@
 # C# MapReduce Implementations
 <p align="center">
 A C# console application that implements 12 different methods of MapReduce.
-This application compiles and sorts a list of words(word counts) and times the run time.
+This application compiles and sorts a list of words(word counts) and logs the run time.
 Below are the implementation methods:<ul>
 <li><b>Sequential</b></li>
 <li><b>Sequential LINQ</b></li>
